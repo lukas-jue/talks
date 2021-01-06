@@ -1,0 +1,57 @@
+---
+title: "My Writing Workflow in R"
+author: "Lukas Jürgensmeier"
+date: "January 06th, 2020"
+output:
+  ioslides_presentation:
+    widescreen: true
+    df_print: paged
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Literature Organization
+
+### Zotero
+
+- Best feature: Zotero browser plug-in
+- Saves article meta data and full-text PDF to your repository with (often) just one click
+
+### Better BibTex
+
+- Zotero plug-in
+- generates LaTeX citekeys in the format `wickhamTidyData2014`
+- keeps a `references.bib` file in your writing directory constantly up-to date
+- Just type `[@wickhamTidyData2014]` in your script to include Wickham (2014) in your text
+
+## RStudio Project
+
+### Empirical Analysis
+
+- Run all empirical analyses in an RStudio Project
+
+### RMarkdown
+
+- Build your tables and figures right from the data within your text. No need to save `.pdf` or `.png` files and then embed them
+- Created customized LaTeX Template, based on [`thesisdown`](https://github.com/ismayc/thesisdown), which is itself based on [`bookdown`](https://github.com/rstudio/bookdown)
+- After that, you can write in easier and more readable Markdown Syntax
+- Your template does all the translating from Markdown to LaTeX
+
+## Git
+
+- Version control everything: Scripts for data analysis AND Text
+- Use a new line for at least every sentence!
+- If you don't want to use the command line, use Git for Desktop instead of the RStudio Git extension (can become buggy when the project grows)
+
+## Summary
+
+Essential tools for my writing workflow:
+
+- **Literature Organization:** Zotero & Zotero Browser plug-in and Better BibTex
+- **Empirical Analysis:** RStudio project
+- **Writing:** Write in RMarkdown and translate to nice LaTeX-PDF through a `.tex` template
+- **Version Control:** Git for scripts *and* "text" files (use command line or Git for Desktop and not within RStudio)

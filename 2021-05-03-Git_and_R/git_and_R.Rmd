@@ -55,6 +55,21 @@ Git lets you and your collaborators
 - Enables collaborative coding on projects 
 - Enables you to keep track of all changes and be able to revert to previous points in time
 
+# Basic Workflow
+
+... when you're working on the project
+
+- Edit your files
+- **commit** as soon as you've completed any important step
+- **push** the commit(s) to the central repository
+  → available to all collaborators
+
+... when someone else has worked on it and you want to continue
+
+- **pull** the (cloud) repository to your local file path to get the most recent version of the project
+- edit files
+- **commit** and **push**
+
 # My approach to Git
 ## When I use it
 - For *all* projects I'm working on alone

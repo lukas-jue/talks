@@ -7,13 +7,39 @@ editor_options:
 
 # Why Git?
 
-| file                      | edit by | change log          |
-|---------------------------|---------|---------------------|
-| `script-2021-04-30a-XY.R` | XY      | upload first draft  |
-| `script-2021-04-30b-LJ.R` | LJ      | fix bug #1          |
-| `script-2021-05-03a-XY.R` | XY      | include new idea #1 |
-| `script-2021-05-03a-LJ.R` | LJ      | rearrange structure |
-| `script-2021-05-03b-LJ.R` | LJ      | reverse bug fix #1  |
+**Bad:**
+
+`script.R`, `script.R`, `script.R`...
+
+...I need to go back to the first version, but I overwrote it.
+
+**Better, but still bad:**
+
+- `script_v1.R`
+- `script_v2-fix-bug.R`
+- `script_v3-fix-bug-final.R`
+- `script_v4-fix-bug-final-final.R`
+
+**Good:**
+
+- `script-2021-04-30a-XY.R` 
+- `script-2021-04-30b-LJ.R`
+- `script-2021-05-03a-XY.R` 
+- `script-2021-05-03a-LJ.R` 
+- `script-2021-05-03b-LJ.R` 
+
+... But what changed in which version?
+
+**Best: Git!**
+
+
+| file       | edit by | change log          |
+|------------|---------|---------------------|
+| `script.R` | XY      | upload first draft  |
+| `script.R` | LJ      | fix bug #1          |
+| `script.R` | XY      | include new idea #1 |
+| `script.R` | LJ      | rearrange structure |
+| `script.R` | LJ      | reverse bug fix #1  |
 
 Git lets you and your collaborators
 
@@ -27,7 +53,7 @@ Git lets you and your collaborators
 - Version control system
 - Central repository for your project (i.e. advanced Dropbox for (text) files)
 - Enables collaborative coding on projects 
-- Enables you to keep track of all changes and be able to revert to previous points in time (without `script_v2_final_final.R`)
+- Enables you to keep track of all changes and be able to revert to previous points in time
 
 # My approach to Git
 ## When I use it

@@ -129,6 +129,26 @@
 <div id="content">
 <div id="why-git" class="section level1">
 <h1>Why Git?</h1>
+<p><strong>Bad:</strong></p>
+<p><code>script.R</code>, <code>script.R</code>, <code>script.R</code>…</p>
+<p>…I need to go back to the first version, but I overwrote it.</p>
+<p><strong>Better, but still bad:</strong></p>
+<ul>
+<li><code>script_v1.R</code></li>
+<li><code>script_v2-fix-bug.R</code></li>
+<li><code>script_v3-fix-bug-final.R</code></li>
+<li><code>script_v4-fix-bug-final-final.R</code></li>
+</ul>
+<p><strong>Good:</strong></p>
+<ul>
+<li><code>script-2021-04-30a-XY.R</code></li>
+<li><code>script-2021-04-30b-LJ.R</code></li>
+<li><code>script-2021-05-03a-XY.R</code></li>
+<li><code>script-2021-05-03a-LJ.R</code></li>
+<li><code>script-2021-05-03b-LJ.R</code></li>
+</ul>
+<p>… But what changed in which version?</p>
+<p><strong>Best: Git!</strong></p>
 <table>
 <thead>
 <tr class="header">
@@ -139,27 +159,27 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td><code>script-2021-04-30a-XY.R</code></td>
+<td><code>script.R</code></td>
 <td>XY</td>
 <td>upload first draft</td>
 </tr>
 <tr class="even">
-<td><code>script-2021-04-30b-LJ.R</code></td>
+<td><code>script.R</code></td>
 <td>LJ</td>
 <td>fix bug #1</td>
 </tr>
 <tr class="odd">
-<td><code>script-2021-05-03a-XY.R</code></td>
+<td><code>script.R</code></td>
 <td>XY</td>
 <td>include new idea #1</td>
 </tr>
 <tr class="even">
-<td><code>script-2021-05-03a-LJ.R</code></td>
+<td><code>script.R</code></td>
 <td>LJ</td>
 <td>rearrange structure</td>
 </tr>
 <tr class="odd">
-<td><code>script-2021-05-03b-LJ.R</code></td>
+<td><code>script.R</code></td>
 <td>LJ</td>
 <td>reverse bug fix #1</td>
 </tr>
@@ -178,7 +198,7 @@
 <li>Version control system</li>
 <li>Central repository for your project (i.e. advanced Dropbox for (text) files)</li>
 <li>Enables collaborative coding on projects</li>
-<li>Enables you to keep track of all changes and be able to revert to previous points in time (without <code>script_v2_final_final.R</code>)</li>
+<li>Enables you to keep track of all changes and be able to revert to previous points in time</li>
 </ul>
 </div>
 <div id="my-approach-to-git" class="section level1">

@@ -66,9 +66,9 @@ Git lets you and your collaborators
 
 ... when someone else has worked on it and you want to continue
 
-- **pull** the (cloud) repository to your local file path to get the most recent version of the project
+- **pull** the cloud repository to your local file path to get the most recent version of the project
 - edit files
-- **commit** and **push**
+- **commit** and **push** to the cloud repository
 
 # My approach to Git
 ## When I use it

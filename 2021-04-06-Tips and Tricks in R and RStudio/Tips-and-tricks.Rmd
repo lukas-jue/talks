@@ -1,0 +1,151 @@
+---
+title: "R and RStudio Tips & Tricks"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+# Shortcuts
+
+> "Name a keyboard shortcut in RStudio that changed your life"
+
+https://twitter.com/kc_analytics/status/1378770803454529538?s=20
+
+- ALT + SHIFT + K = Open shortcut overview
+
+- CTRL + Shift + M = %>% 
+- CTRL + ALT + I = Insert code chunk
+- CTRL + SHIFT + R = Insert section header (in script)
+- ALT + - = <-
+
+- ALT + UP/DOWN = move code line up or down
+- ALT + SHIFT + UP/DOWN = copy current line and move up/down (instead of copy & paste)
+
+- CTRL + . = Go to file/function (especially useful to find function definitions in packages/big projects)
+- TAB = Auto complete (really useful for file paths when reading files, e.g., within `read_csv("path/to/file.csv")``)
+
+# Visualization
+
+Start branding your graphs
+https://michaeltoth.me/you-need-to-start-branding-your-graphs-heres-how-with-ggplot.html
+- define custom ggplot theme
+- define custom color palette (depending on project)
+
+# Vectorizing
+
+Stop using loops and start using `purrr::map_...`
+
+- often way faster
+- less code
+- specify output type
+
+Example: read 10 same-structured files and row-bind them
+
+```{r, eval=FALSE}
+# loop-style
+library(tidyverse)
+
+df <- tibble()
+
+for (i in 1:length(vector)) {
+  df_new <- read_csv(files[i])
+  df <- bind_rows(df, df_new)
+}
+```
+
+```{r, eval=FALSE}
+# purrr-style
+library(tidyverse)
+
+df <- purrr::map_dfr(files, read_csv)
+```
+
+- `vectorize()`
+- capture side effects: `possibly()`, `safely()`
+- iteratively (depend on previously computed values)
+- `accumulate()`
+
+# Reading files
+
+Consider different methods of reading/writing/storing data
+
+- `base::read.csv()` (standard)
+- `base::save()`, `base::saveRDS()` (.Rdata, .rds)
+- `readr::read_csv()` (faster, tidyverse)
+- `data.table::fread()` (even faster)
+- `vroom::vroom()` (even faster, but still a bit experimental)
+- `arrow::read_arrow()` (.parquet, smaller size than .csv)
+
+# Twitter
+
+- Follow `#rstats`
+- Follow RStudio employees
+
+# R independently from RStudio (Till)
+
+- Use R with VIM editor
+- RStudio VIM editor emulation
+- pre-defined templates (e.g. for YAML headers)
+- even more (personalizable) short cuts
+
+# ggplot2 & plotly (Dimitri)
+
+- Interactive HTML ggplots
+
+```{r, eval=FALSE}
+library(ggplot2)
+library(plotly)
+
+p <- ggplot2(aes(...)) +
+  ...
+ggplotly(p)
+```
+
+- `ggforce` doesn't work with `plotly`
+
+# RStudio Add-ins (Haseeb)
+
+- point and click addin for ggplot
+  - `ggplotAssist`
+  - `esquisse`
+- `styler`: nice-looking code
+
+# Fonts with code-specific ligatures (Haseeb)
+
+- ligature support (e.g. `<-`)
+favorite fonts:
+- jetbeans mono (jetbrains)
+- fira code
+
+# Tips to make regex less painful
+
+- https://regexr.com/
+- https://regex101.com/
+- https://github.com/gadenbuie/regexplain
+
+# Bring tables into a data frame/tibble (Janine)
+
+- `datapasta` addin
+- copy and paste (web) tables into tibbles
+
+# Citations in R Markdown
+
+- `citr` addin (pre-installed in RStudio >= 1.4)
+
+# Tidy time series (machine learning) (Haseeb)
+
+- packages `modeltime`, `timetk`
+- by https://twitter.com/mdancho84
+
+# Tidytuesday
+
+- https://github.com/rfordatascience/tidytuesday
+- Twitter: `#tidytuesday`
+- Live-recorded screen casts https://twitter.com/drob
+
+
+# Ideas for future meetups
+
+- Loops vs. Vectorization: "Bring your loop and we're vectorizing it"
+- Regex
+- RStudio Addins

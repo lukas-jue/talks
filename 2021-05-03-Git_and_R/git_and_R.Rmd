@@ -80,6 +80,13 @@ Git lets you and your collaborators
 - Outside RStudio for all text-based files (i.e. LaTeX projects) via a Git GUI (e.g. GitKraken, Git for Desktop)
 - no command line necessary
 
+# What else is possible with Git?
+
+Serving web pages directly from your repository
+
+- really nice with R Markdown-generated HTML websites such as this one
+- other examples: [Course website](https://lukas-jue.github.io/intro-tidyverse/), [Course slides](https://lukas-jue.github.io/intro-tidyverse/slides/u2-d07-single-df/u2-d07-single-df.html#1)
+
 # Resources
 
 - Setting up Git in RStudio: [Happy Git with R](https://happygitwithr.com/)

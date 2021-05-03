@@ -1,0 +1,45 @@
+---
+title: "Git & RStudio"
+output: rmdformats::html_docco
+editor_options: 
+  chunk_output_type: console
+---
+
+# Why Git?
+
+| file                      | edit by | change log          |
+|---------------------------|---------|---------------------|
+| `script-2021-04-30a-XY.R` | XY      | upload first draft  |
+| `script-2021-04-30b-LJ.R` | LJ      | fix bug #1          |
+| `script-2021-05-03a-XY.R` | XY      | include new idea #1 |
+| `script-2021-05-03a-LJ.R` | LJ      | rearrange structure |
+| `script-2021-05-03b-LJ.R` | LJ      | reverse bug fix #1  |
+
+Git lets you and your collaborators
+
+- keep track of all changes
+- revert to previous stages of the project at any time without losing
+  intermediate work
+- share your projects in a reproducible way
+
+# What's Git?
+
+- Version control system
+- Central repository for your project (i.e. advanced Dropbox for (text) files)
+- Enables collaborative coding on projects 
+- Enables you to keep track of all changes and be able to revert to previous points in time (without `script_v2_final_final.R`)
+
+# My approach to Git
+## When I use it
+- For *all* projects I'm working on alone
+- For most projects I'm working on collaboratively
+
+## How I use it
+- Within RStudio for R projects via the build-in Git interface (keeping track of `.R`, `.Rmd`, `.csv` files)
+- Outside RStudio for all text-based files (i.e. LaTeX projects) via a Git GUI (e.g. GitKraken, Git for Desktop)
+- no command line necessary
+
+# Resources
+
+- Setting up Git in RStudio: [Happy Git with R](https://happygitwithr.com/)
+- [GitKraken](https://www.gitkraken.com/) (my favorite Git GUI)

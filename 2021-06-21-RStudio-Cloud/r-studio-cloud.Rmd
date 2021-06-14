@@ -1,47 +1,47 @@
 ---
-title: "What's R Studio Cloud?"
+title: "What's RStudio Cloud?"
 output: rmdformats::html_docco
 editor_options: 
   chunk_output_type: console
 ---
 
-# Why R Studio Cloud?
+# Why RStudio Cloud?
 
-Often, the first steps in learning how to code in R are
+Often, the first steps in learning how to code in R are:
 
 - Install R
 - Install RStudio IDE
 - Install packages
 - What the heck is this error?
-- Why can't I generate PDFs from Markdown? What is LaTeX?
-- "This is too difficult for me"
+- Why can't I generate PDFs from Markdown? What's LaTeX?
+- "That's too difficult for me..."
 
-> **It's more encouraging to start coding with nice plots/applications in the fist minutes**
+> **It's more encouraging to start coding with nice plots/applications in the first few minutes**
 
-# R Studio Cloud Makes the First Steps a Breeze
+# RStudio Cloud Makes These First Steps a Breeze
 
 ## Features
 
 - Use RStudio without any installation in the cloud!
 - Students can dive right into programming without any installation problems
 - Powerful assignment tools and pre-configured projects
+- Easy for us -- instructors -- to check students' work
 
 ## Use cases
 
 - Data Science courses
   + create a workspace and invite students
-  + create a base project: every new project has your prepared data scripts already loaded and your packages installed
+  + make a *base project*: every new project has your prepared scripts and packages already loaded/installed
   + let students share their projects
-  + nice usage statistics (how much do the students actually code?)
+  + excellent usage statistics (how much do students code?)
   
-- Your own sandbox: Check if your bug also happens on a fresh Linux system
-- Easy-to use cloud instance for scripts that run up to 48h (only in the paid versions)
-
+- Your sandbox: Check if your bug also happens on a fresh Linux system
+- Easy-to-use cloud instance for scripts that run up to 48h (only in the paid versions)
 
 # Resources
 
 - [R Studio Cloud Website](https://rstudio.cloud/)
 - [Video: Mel Gregory | RStudio Cloud for education | RStudio (2019)](https://www.youtube.com/watch?v=PviVimazpz8):
-24-minute live-demo for teaching with R Studio Cloud
+24-minute live demo for teaching with R Studio Cloud
 - Relatively affordable [Pricing](https://rstudio.cloud/plans/).
 15 USD per month + small fees for exceeding the computing limit 
